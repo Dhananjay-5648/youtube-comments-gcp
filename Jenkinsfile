@@ -1,18 +1,15 @@
 pipeline {
     agent any
-
     environment {
         PROJECT_ID = 'youtube-comments-507110'
     }
-
     stages {
         stage('Checkout SCM') {
             steps {
                 checkout scm
             }
         }
-
-                stage('Run Sentiment Analysis') {
+        stage('Run Sentiment Analysis') {
             steps {
                 sh '''
                 echo "Verifying credentials..."
@@ -23,7 +20,6 @@ pipeline {
                 ansible-playbook -i ansible/inventory ansible/playbooks/run_pretrained_sentiment.yml
                 '''
             }
-        }
         }
     }
 }
