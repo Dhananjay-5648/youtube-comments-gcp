@@ -1,0 +1,4 @@
+project_id: "youtube-comments-507110"
+region: "us-central1"
+cf_sa_email: "cloud-fn-sa@youtube-comments-507110.iam.gserviceaccount.com"
+bucket: "yt-raw-comments-507110"

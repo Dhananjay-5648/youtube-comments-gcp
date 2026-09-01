@@ -4,7 +4,7 @@ variable "cf_sa_email" {}
 variable "region" {}
 
 resource "google_composer_environment" "yt_pipeline" {
-  name    = var-name1
+  name    = var.name
   project = var.project_id
   region  = "us-central1"
 
